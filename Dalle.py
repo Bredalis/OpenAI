@@ -13,11 +13,11 @@ from ChatGPT import *
 
 # Obteniendo el prompt a partir de la repuesta del modelo CHATGPT
 
-prompt_imagen = respuesta["choices"][0]["message"]["content"]
+prompt_imagen = respuesta.choices[0].message.content
 
 # Crear imagen
 
-imagen = openai.Image.create(
+imagen = openai.images.generate(
 	prompt = prompt_imagen,
 	n = 1,
 	size = "1024x1024"
@@ -25,7 +25,7 @@ imagen = openai.Image.create(
 
 # Url de la imagen
 
-image_url = imagen["data"][0]["url"]
+image_url = imagen.data[0].url
 
 # Obtener la url
 
