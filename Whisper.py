@@ -9,11 +9,9 @@ de nlp para audio
 import openai
 
 # Api del modelo
-
-openai.api_key = "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"
+openai.api_key = "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"
 
 # Transcribir audio
-
 url = "C:/Users/Angelica Gerrero/Videos/Audio_Sarcastico.wav"
 
 with open(url, "rb") as audio:
@@ -26,7 +24,6 @@ transcripcion = transcripcion.text
 print("Transcripcion audio-texto: \n\n", transcripcion)
 
 # Traduccion de audio
-
 url = open(url, "rb")
 
 traduccion = openai.audio.translations.create(
