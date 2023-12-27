@@ -20,7 +20,7 @@ prompt_imagen = respuesta.choices[0].message.content
 imagen = openai.images.generate(
 	prompt = prompt_imagen,
 	n = 1,
-	size = "1024x1024"
+	size = '1024x1024'
 )
 
 # Url de la imagen
@@ -30,14 +30,15 @@ image_url = imagen.data[0].url
 # Obtener la url
 
 foto = requests.get(image_url, stream = True)
-print("Imagen:", foto)
+print('Imagen:', foto)
 
 # Guardando imagen
 
+url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/IMAI/foto_generada.jpg'
 if foto.status_code == 200:
-  with open("C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/IMAI/foto_generada.jpg", "wb") as f:
+  with open(url, 'wb') as f:
     shutil.copyfileobj(foto.raw, f)
-    print("¡Se guardo!")
+    print('¡Se guardo!')
 
 else:
-  print("Error al acceder a la imagen")
+  print('Error al acceder a la imagen')

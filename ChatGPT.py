@@ -1,29 +1,22 @@
 
-"""
-ChatGPT: es un modelo
-de nlp, que genera 
-texto y resumenes
-"""
-
-# Librerias
-
 import openai
 from textwrap import wrap
 
 # Api del modelo
-openai.api_key = "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"
+
+openai.api_key = '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'
 
 # Crear prompt y la estructura del mensaje
 
-prompt = input("Ingrese su pregunta: ")
+prompt = input('Ingrese su pregunta: ')
 mensajes = [
-	{"role":"system", "content": "dame una respuesta muy corta"},
-	{"role": "user", "content": prompt}
+	{'role':'system', 'content': 'dame una respuesta muy corta'},
+	{'role': 'user', 'content': prompt}
 ]
 
 # Modelo y respuesta
 
-modelo = "gpt-3.5-turbo"
+modelo = 'gpt-3.5-turbo'
 
 respuesta = openai.chat.completions.create(
 	model = modelo,
@@ -32,4 +25,4 @@ respuesta = openai.chat.completions.create(
 	max_tokens = 1000 
 )
 
-print("\n".join(wrap(respuesta.choices[0].message.content)))
+print('\n'.join(wrap(respuesta.choices[0].message.content)))
