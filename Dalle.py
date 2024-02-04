@@ -34,7 +34,7 @@ print('Imagen:', foto)
 
 # Guardando imagen
 
-url = 'C:/Users/Angelica Gerrero/Desktop/LenguajesDeProgramacion/Icon/IMAI/foto_generada.jpg'
+url = 'C:/Users/Bradalis/Desktop/LenguajesDeProgramacion/Icon/IMAI/foto_generada.jpg'
 if foto.status_code == 200:
   with open(url, 'wb') as f:
     shutil.copyfileobj(foto.raw, f)

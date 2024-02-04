@@ -4,7 +4,7 @@ from textwrap import wrap
 
 # Api del modelo
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Crear prompt y la estructura del mensaje
 

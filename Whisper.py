@@ -3,11 +3,11 @@ import openai
 
 # Api del modelo
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Transcribir audio
 
-url = 'C:/Users/Angelica Gerrero/Videos/Audio_Sarcastico.wav'
+url = 'Frase.mp3'
 
 with open(url, 'rb') as audio:
 	transcripcion = openai.audio.transcriptions.create(
