@@ -3,7 +3,7 @@ import openai
 
 # Api del modelo
 
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Transcribir audio
 
